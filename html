@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Buat Kamuu</title>
+  <style>
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    .popup-image {
+      max-width: 100%;
+      max-height: 60vh;
+      margin-bottom: 10px;
+    }
+    #nextButton {
+      font-size: 18px;
+      padding: 10px 20px;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup-container" id="imagePopup">
+    <img src="" alt="Popup Image" class="popup-image">
+    <br>
+    <button id="nextButton">Coba kamu pencet ini</button>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const imagePopup = document.getElementById("imagePopup");
+      const popupImage = imagePopup.querySelector(".popup-image");
+      const nextButton = document.getElementById("nextButton");
+
+      const images = [
+        "/image1.jpeg",
+        "/image2.jpeg"
+      ];
+
+      let currentImageIndex = 0;
+
+      // Show the image popup
+      function showImagePopup() {
+        popupImage.src = images[currentImageIndex];
+        imagePopup.style.display = "block";
+      }
+
+      // Hide the image popup
+      function hideImagePopup() {
+        imagePopup.style.display = "none";
+      }
+
+      // Show next alert and hide the image popup
+      function showNextAlert() {
+        hideImagePopup();
+        if (currentImageIndex < images.length - 1) {
+          currentImageIndex++;
+          alert("Semangat nugasnya cantik");
+          alert("Semangat nugasnya cantik");
+          alert("Semangat nugasnya cantik");
+          showImagePopup();
+        } else {
+          alert("Sekian dari aku terimakasih");
+        }
+      }
+
+      // Show the first alert
+      alert("Hallo syifaa");
+      alert("Lagi nugas yaaaa?? jawab iya   atau kulempar pake koin ipb")
+      alert("Semangat nugasnya cantik")
+      alert("apakah syifa sudah makan?kalau belum makan mari makann")
+      alert("sapa niii yang ngasih syifa tugas?bikin susah aj (emot marah)")
+      alert("Semangat nugasnya cantik")
+      alert("lagi buat tabel ya? ")
+      alert("coba adik adik jawab, tabel tabel apa yang paling enak. jawab di dalam hati saja dik")
+      alert("jawabannya ta'beliin rubicon, wrwrwrwrwrwrwr")
+      alert("Semangat nugasnya cantik")
+      alert("Sudah sepertinya saya garing ya")
+      alert("jangan galak galak dan jangan jutek ya wahai mba mba efkaha yang fomo")
+      alert("titip salam buat ibu!! maaf ya ibu aku mau kenalan tapi belum bisa :(")
+      alert("Semangat nugasnya cantik");
+      alert("Semangat nugasnya cantik");
+      alert("Semangat nugasnya cantik");
+      showImagePopup();
+
+      // Set up next button click event
+      nextButton.addEventListener("click", showNextAlert);
+    });
+  </script>
+</body>
+
+</html>
